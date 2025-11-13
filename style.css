@@ -96,32 +96,35 @@ h1, h2, h3, h4, h5, h6 {
 
 .preloader-content {
     text-align: center;
+    padding: clamp(1rem, 4vw, 2rem);
+    max-width: 90vw;
 }
 
 .logo-loader {
-    margin-bottom: 30px;
+    margin-bottom: clamp(1.25rem, 4vw, 2rem);
 }
 
 .loader-logo-circle {
     width: auto;
-    max-width: 250px;
+    max-width: clamp(180px, 50vw, 250px);
     height: auto;
-    padding: 30px;
+    padding: clamp(1.25rem, 4vw, 2rem);
     background: white;
     animation: logoFloat 3s ease-in-out infinite, loaderPulse 2s ease-in-out infinite;
-    box-shadow: 0 0 40px rgba(201, 168, 106, 0.6);
+    box-shadow: 0 0 clamp(20px, 5vw, 40px) rgba(201, 168, 106, 0.6);
     position: relative;
-    border-radius: 20px;
-    border: 5px solid var(--gold);
+    border-radius: clamp(12px, 3vw, 20px);
+    border: clamp(3px, 0.5vw, 5px) solid var(--gold);
+    margin: 0 auto;
 }
 
 .loader-logo-circle::before {
     content: '';
     position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
+    top: clamp(-8px, -2vw, -10px);
+    left: clamp(-8px, -2vw, -10px);
+    right: clamp(-8px, -2vw, -10px);
+    bottom: clamp(-8px, -2vw, -10px);
     border-radius: 50%;
     border: 2px solid var(--gold);
     opacity: 0.3;
@@ -131,10 +134,10 @@ h1, h2, h3, h4, h5, h6 {
 .loader-logo-circle::after {
     content: '';
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
+    top: clamp(-15px, -3vw, -20px);
+    left: clamp(-15px, -3vw, -20px);
+    right: clamp(-15px, -3vw, -20px);
+    bottom: clamp(-15px, -3vw, -20px);
     border-radius: 50%;
     border: 2px solid var(--gold);
     opacity: 0.2;
@@ -144,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 .loader-logo-img {
     width: 100%;
     height: auto;
-    max-height: 150px;
+    max-height: clamp(100px, 25vw, 150px);
     object-fit: contain;
     animation: logoZoom 4s ease-in-out infinite;
 }
@@ -154,18 +157,18 @@ h1, h2, h3, h4, h5, h6 {
         transform: translateY(0) scale(1);
     }
     50% {
-        transform: translateY(-20px) scale(1.05);
+        transform: translateY(clamp(-10px, -3vw, -20px)) scale(1.05);
     }
 }
 
 @keyframes loaderPulse {
     0%, 100% {
-        border-width: 5px;
-        box-shadow: 0 0 40px rgba(201, 168, 106, 0.6);
+        border-width: clamp(3px, 0.5vw, 5px);
+        box-shadow: 0 0 clamp(20px, 5vw, 40px) rgba(201, 168, 106, 0.6);
     }
     50% {
-        border-width: 8px;
-        box-shadow: 0 0 80px rgba(201, 168, 106, 1), 0 0 120px rgba(201, 168, 106, 0.5);
+        border-width: clamp(5px, 1vw, 8px);
+        box-shadow: 0 0 clamp(40px, 10vw, 80px) rgba(201, 168, 106, 1), 0 0 clamp(60px, 15vw, 120px) rgba(201, 168, 106, 0.5);
     }
 }
 
@@ -190,12 +193,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .loader-bar {
-    width: 300px;
-    height: 4px;
+    width: min(90%, 300px);
+    height: clamp(3px, 0.5vw, 4px);
     background-color: rgba(255,255,255,0.2);
     border-radius: 10px;
     overflow: hidden;
-    margin: 0 auto 20px;
+    margin: 0 auto clamp(1rem, 3vw, 1.5rem);
 }
 
 .loader-progress {
@@ -211,10 +214,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .loader-text {
     color: white;
-    font-size: 16px;
-    letter-spacing: 2px;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    letter-spacing: clamp(1px, 0.3vw, 2px);
     opacity: 0;
     animation: fadeIn 1s ease 0.5s forwards;
+    font-weight: 500;
 }
 
 @keyframes fadeIn {

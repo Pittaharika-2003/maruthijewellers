@@ -23,6 +23,12 @@
     --radius-lg: 20px;
     --radius-xl: 30px;
 }
+:root {
+  --gold: #C9A24D;
+  --black: #121212;
+  --white: #ffffff;
+  --gray: #666666;
+}
 
 body {
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -1859,3 +1865,64 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 16px;
     }
 }
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: var(--white);
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  color: var(--black);
+}
+
+.hero-text p {
+  margin: 20px 0 40px;
+  color: var(--gray);
+  font-size: 18px;
+}
+.btn {
+  padding: 14px 32px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary-btn {
+  background-color: var(--gold);
+  color: white;
+}
+
+.secondary-btn {
+  border: 1px solid var(--gold);
+  color: var(--gold);
+}
+@media (max-width: 768px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-image img {
+    margin-top: 40px;
+  }
+}
+
+

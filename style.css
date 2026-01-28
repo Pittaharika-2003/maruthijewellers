@@ -3,11 +3,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-.banner
-.slider
-.hero img { position:absolute }
-position: absolute;
-left: 50%;
 
 :root {
     --primary-green: #1a4d4d;
@@ -27,12 +22,6 @@ left: 50%;
     --radius-md: 12px;
     --radius-lg: 20px;
     --radius-xl: 30px;
-}
-:root {
-  --gold: #C9A24D;
-  --black: #121212;
-  --white: #ffffff;
-  --gray: #666666;
 }
 
 body {
@@ -1869,67 +1858,4 @@ h1, h2, h3, h4, h5, h6 {
     .nav-icons i {
         font-size: 16px;
     }
-}
-
-.hero {
-  display: flex;
-  width: 100%;
-  height: calc(100vh - 80px); /* adjusts for navbar */
-}
-
-.hero-left {
-  width: 50%;
-  padding: 100px 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #ffffff;
-}
-
-.hero-left h1 {
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
-.hero-left p {
-  font-size: 18px;
-  line-height: 1.7;
-  margin-bottom: 30px;
-  color: #444;
-}
-
-.hero-btn {
-  display: inline-block;
-  padding: 14px 32px;
-  background: #0c3b36;
-  color: #fff;
-  text-decoration: none;
-  width: fit-content;
-}
-
-/* Right Image */
-.hero-right {
-  width: 50%;
-  height: 100%;
-}
-
-.hero-right img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    height: auto;
-  }
-
-  .hero-left,
-  .hero-right {
-    width: 100%;
-  }
-
-  .hero-right img {
-    height: 300px;
-  }
 }

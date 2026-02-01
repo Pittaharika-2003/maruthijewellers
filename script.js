@@ -1,48 +1,4 @@
 // =================================
-// PRELOADER
-// =================================
-window.addEventListener('load', () => {
-    const preloader = document.querySelector('.preloader');
-    setTimeout(() => {
-        preloader.classList.add('hidden');
-        setTimeout(() => {
-            preloader.style.display = 'none';
-        }, 500);
-    }, 2500);
-});
-
-// =================================
-// CUSTOM CURSOR
-// =================================
-const cursorDot = document.querySelector('.cursor-dot');
-const cursorOutline = document.querySelector('.cursor-outline');
-
-window.addEventListener('mousemove', (e) => {
-    const posX = e.clientX;
-    const posY = e.clientY;
-
-    cursorDot.style.left = `${posX}px`;
-    cursorDot.style.top = `${posY}px`;
-
-    cursorOutline.animate({
-        left: `${posX}px`,
-        top: `${posY}px`
-    }, { duration: 500, fill: 'forwards' });
-});
-
-// Enlarge cursor on hover
-document.querySelectorAll('a, button, .card-image, .product-card').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-        cursorDot.style.transform = 'scale(2)';
-        cursorOutline.style.transform = 'scale(1.5)';
-    });
-    el.addEventListener('mouseleave', () => {
-        cursorDot.style.transform = 'scale(1)';
-        cursorOutline.style.transform = 'scale(1)';
-    });
-});
-
-// =================================
 // INITIALIZE AOS (Animate On Scroll)
 // =================================
 AOS.init({

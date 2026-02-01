@@ -323,6 +323,17 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 14px;
     }
 }
+@media (max-width: 768px) {
+
+    .nav-menu {
+        display: none; /* hide desktop links */
+    }
+
+    .mobile-menu-toggle {
+        display: flex; /* show hamburger */
+    }
+}
+
 
 
 /* Hero Section */
@@ -424,6 +435,48 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 13px;
     }
 }
+.jewellery-showcase {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 40px;
+    background-color: #ffffff;
+}
+
+/* TEXT SIDE */
+.showcase-text {
+    flex: 1;
+    padding: 0;
+}
+
+.showcase-text h2 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.showcase-text p {
+    font-size: 18px;
+    max-width: 480px;
+}
+
+/* IMAGE SIDE */
+.showcase-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.showcase-image img {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+}
+
+/* BUTTON */
+.showcase-btn {
+    margin-top: 30px;
+}
+
 
 /* ===== OUR COLLECTIONS SECTION ===== */
 
@@ -498,22 +551,37 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
 
-    .collection-block {
-        height: 320px;
+    .jewellery-showcase {
+        flex-direction: column;
+        padding: 40px 20px;   /* 🔥 reduces huge white space */
+        text-align: center;
     }
 
-    .collection-overlay h3 {
-        font-size: 26px;
+    .showcase-text h2 {
+        font-size: 28px;
+        line-height: 1.3;
     }
 
-    .collection-overlay p {
-        font-size: 14px;
+    .showcase-text p {
+        font-size: 16px;
+        margin: 16px auto;
     }
 
-    .collections-title {
-        font-size: 30px;
+    .showcase-btn {
+        margin-top: 20px;
+    }
+
+    .showcase-image {
+        margin-top: 30px;
+    }
+
+    .showcase-image img {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 12px;
     }
 }
+
 /* ================= COLLECTIONS ANIMATIONS ================= */
 
 .collections {

@@ -223,7 +223,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-container {
   max-width: 1200px;
   margin: auto;
-  padding: 30px 20px;
+  padding: 10px 20px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
@@ -236,7 +236,6 @@ h1, h2, h3, h4, h5, h6 {
   height: auto;
   display: block;
   border-radius: 8px;
-  margin-top:30px;
 }
 
 /* TEXT */

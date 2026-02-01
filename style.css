@@ -218,7 +218,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ===== HERO SECTION ===== */
 .hero {
-  padding: 90px 0 60px; /* MINIMUM GAP FROM NAVBAR */
+  padding: 90px 0 60px;
+  padding-top: 90px;   /* creates space from navbar */
+  margin-top: 30px;
 }
 
 .hero-container {

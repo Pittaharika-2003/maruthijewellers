@@ -1,3 +1,11 @@
+
+const toggle = document.getElementById('mobileMenuToggle');
+const menu = document.getElementById('navMenu');
+
+toggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+
 // =================================
 // INITIALIZE AOS (Animate On Scroll)
 // =================================

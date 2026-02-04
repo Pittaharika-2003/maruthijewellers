@@ -76,7 +76,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex flex-col w-full bg-[var(--dark-700)] overflow-x-hidden">
+    <main className="flex flex-col w-full bg-[var(--dark-800)] overflow-x-hidden">
       {/* Progress Bar */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-gold-gradient z-50 origin-left"
@@ -123,7 +123,7 @@ function Header({ isScrolled }: { isScrolled: boolean }) {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-40 flex items-center justify-between w-full h-[90px] px-6 md:px-[100px] border-b transition-all duration-300 ${
         isScrolled
-          ? "bg-[#0D0D0D]/95 backdrop-blur-lg border-[var(--dark-300)]"
+          ? "bg-[#0D0D0D]/95 backdrop-blur-lg border-[var(--dark-500)]"
           : "bg-transparent border-transparent"
       }`}
     >
@@ -138,7 +138,7 @@ function Header({ isScrolled }: { isScrolled: boolean }) {
           animate={{ rotate: [0, 5, -5, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
-          <span className="font-cormorant text-lg font-bold text-[var(--dark-700)]">
+          <span className="font-cormorant text-lg font-bold text-[var(--dark-800)]">
             MJ
           </span>
         </motion.div>
@@ -209,7 +209,7 @@ function Header({ isScrolled }: { isScrolled: boolean }) {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 right-0 bg-[var(--dark-700)]/95 backdrop-blur-lg border-b border-[var(--dark-300)] md:hidden"
+            className="absolute top-full left-0 right-0 bg-[var(--dark-800)]/95 backdrop-blur-lg border-b border-[var(--dark-500)] md:hidden"
           >
             <nav className="flex flex-col p-6 gap-4">
               {["Home", "Collections", "About", "Contact"].map((item) => (
@@ -260,11 +260,11 @@ function LiveGoldRate() {
       {/* Live Indicator */}
       <div className="flex items-center gap-2">
         <motion.div
-          className="w-2 h-2 rounded-full bg-[var(--green-accent)]"
+          className="w-2 h-2 rounded-full bg-[var(--green-whatsapp)]"
           animate={{ opacity: [1, 0.3, 1] }}
           transition={{ duration: 1.5, repeat: Infinity }}
         />
-        <span className="font-inter text-xs text-[var(--green-accent)] font-medium hidden sm:inline">
+        <span className="font-inter text-xs text-[var(--green-whatsapp)] font-medium hidden sm:inline">
           LIVE
         </span>
       </div>
@@ -272,7 +272,7 @@ function LiveGoldRate() {
       {isPositive ? (
         <TrendingUp className="w-5 h-5 text-[var(--gold-primary)]" />
       ) : (
-        <TrendingDown className="w-5 h-5 text-[var(--red-accent)]" />
+        <TrendingDown className="w-5 h-5 text-[var(--red-negative)]" />
       )}
 
       <span className="font-inter text-xs md:text-sm font-semibold text-[var(--gold-primary)] tracking-[1px]">
@@ -301,18 +301,18 @@ function LiveGoldRate() {
           animate={{ scale: 1 }}
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-2xl border ${
             isPositive
-              ? "border-[var(--green-accent)] bg-[#25D36620]"
-              : "border-[var(--red-accent)] bg-[#EF444420]"
+              ? "border-[var(--green-whatsapp)] bg-[#25D36620]"
+              : "border-[var(--red-negative)] bg-[#EF444420]"
           }`}
         >
           {isPositive ? (
-            <ArrowUp className="w-3 h-3 text-[var(--green-accent)]" />
+            <ArrowUp className="w-3 h-3 text-[var(--green-whatsapp)]" />
           ) : (
-            <ArrowDown className="w-3 h-3 text-[var(--red-accent)]" />
+            <ArrowDown className="w-3 h-3 text-[var(--red-negative)]" />
           )}
           <span
             className={`font-inter text-xs font-semibold ${
-              isPositive ? "text-[var(--green-accent)]" : "text-[var(--red-accent)]"
+              isPositive ? "text-[var(--green-whatsapp)]" : "text-[var(--red-negative)]"
             }`}
           >
             {formatPercentChange(data.changePercent)}
@@ -336,7 +336,7 @@ function LiveGoldRate() {
       </div>
 
       {/* Additional Prices - Scrolling on mobile */}
-      <div className="hidden lg:flex items-center gap-6 ml-4 pl-4 border-l border-[var(--dark-300)]">
+      <div className="hidden lg:flex items-center gap-6 ml-4 pl-4 border-l border-[var(--dark-500)]">
         <div className="flex items-center gap-2">
           <span className="font-inter text-xs text-[var(--text-muted)]">22K:</span>
           <span className="font-inter text-sm text-white">
@@ -460,14 +460,14 @@ function HeroSection() {
             whileHover={{ scale: 1.05, boxShadow: "0 8px 24px #D4AF3760" }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="font-inter text-sm font-semibold text-[var(--dark-700)] tracking-[1px]">
+            <span className="font-inter text-sm font-semibold text-[var(--dark-800)] tracking-[1px]">
               Explore Collections
             </span>
             <motion.div
               animate={{ x: [0, 5, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
-              <ArrowRight className="w-4 h-4 text-[var(--dark-700)]" />
+              <ArrowRight className="w-4 h-4 text-[var(--dark-800)]" />
             </motion.div>
           </motion.button>
 
@@ -699,7 +699,7 @@ function CollectionCard({
       {/* Featured badge */}
       {featured && (
         <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-gold-gradient">
-          <span className="font-inter text-[10px] font-bold text-[var(--dark-700)] tracking-[1px]">
+          <span className="font-inter text-[10px] font-bold text-[var(--dark-800)] tracking-[1px]">
             POPULAR
           </span>
         </div>
@@ -742,7 +742,7 @@ function WhyChooseUsSection() {
   return (
     <section
       ref={ref}
-      className="flex flex-col items-center gap-[60px] w-full px-6 md:px-[100px] py-[80px] md:py-[100px] bg-[var(--dark-600)]"
+      className="flex flex-col items-center gap-[60px] w-full px-6 md:px-[100px] py-[80px] md:py-[100px] bg-[var(--dark-750)]"
     >
       {/* Header */}
       <motion.div
@@ -806,7 +806,7 @@ function FeatureCard({
 }) {
   return (
     <motion.div
-      className="flex flex-col items-center gap-6 px-6 py-9 rounded-[20px] border border-[var(--dark-200)] hover-lift hover-glow cursor-pointer"
+      className="flex flex-col items-center gap-6 px-6 py-9 rounded-[20px] border border-[var(--dark-400)] hover-lift hover-glow cursor-pointer"
       style={{
         background: "#151515",
       }}
@@ -998,7 +998,7 @@ function ContactSection() {
     <section
       ref={ref}
       id="contact"
-      className="flex flex-col items-center gap-[60px] w-full px-6 md:px-[100px] py-[80px] md:py-[100px] bg-[var(--dark-600)]"
+      className="flex flex-col items-center gap-[60px] w-full px-6 md:px-[100px] py-[80px] md:py-[100px] bg-[var(--dark-750)]"
     >
       {/* Header */}
       <motion.div
@@ -1056,7 +1056,7 @@ function ContactSection() {
         <motion.a
           href="https://wa.me/919849497131"
           target="_blank"
-          className="flex items-center gap-3 px-8 py-3.5 rounded-[30px] bg-[var(--green-accent)]"
+          className="flex items-center gap-3 px-8 py-3.5 rounded-[30px] bg-[var(--green-whatsapp)]"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -1094,7 +1094,7 @@ function ContactCard({
 }) {
   return (
     <motion.div
-      className="flex flex-col gap-5 px-7 py-8 rounded-[20px] border border-[var(--dark-200)] hover-lift hover-glow"
+      className="flex flex-col gap-5 px-7 py-8 rounded-[20px] border border-[var(--dark-400)] hover-lift hover-glow"
       style={{ background: "#151515" }}
       whileHover={{ borderColor: "#D4AF3760" }}
     >
@@ -1140,7 +1140,7 @@ function Footer() {
             <div
               className="flex items-center justify-center w-11 h-11 rounded-[22px] bg-gold-gradient"
             >
-              <span className="font-cormorant text-base font-bold text-[var(--dark-700)]">
+              <span className="font-cormorant text-base font-bold text-[var(--dark-800)]">
                 MJ
               </span>
             </div>
@@ -1217,7 +1217,7 @@ function Footer() {
       </div>
 
       {/* Divider */}
-      <div className="w-full h-px bg-[var(--dark-300)]" />
+      <div className="w-full h-px bg-[var(--dark-500)]" />
 
       {/* Bottom Footer */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 w-full">
@@ -1235,7 +1235,7 @@ function Footer() {
               key={index}
               href={social.href}
               target="_blank"
-              className="flex items-center justify-center w-11 h-11 rounded-[22px] border border-[var(--dark-100)]"
+              className="flex items-center justify-center w-11 h-11 rounded-[22px] border border-[var(--dark-300)]"
               style={{ background: "#121212" }}
               whileHover={{
                 scale: 1.1,
@@ -1257,7 +1257,7 @@ function FloatingWhatsApp() {
     <motion.a
       href="https://wa.me/919849497131"
       target="_blank"
-      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[var(--green-accent)] shadow-lg"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[var(--green-whatsapp)] shadow-lg"
       initial={{ scale: 0 }}
       animate={{ scale: 1 }}
       transition={{ delay: 1, type: "spring" }}
@@ -1266,7 +1266,7 @@ function FloatingWhatsApp() {
     >
       <MessageCircle className="w-7 h-7 text-white" />
       <motion.div
-        className="absolute inset-0 rounded-full bg-[var(--green-accent)]"
+        className="absolute inset-0 rounded-full bg-[var(--green-whatsapp)]"
         animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
         transition={{ duration: 2, repeat: Infinity }}
       />

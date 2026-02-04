@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silver Collections | Maruthi Jewellers</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+.silver-page {
+    padding: 40px 6%;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin: 40px 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.1);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    padding: 30px;
+    z-index: 999;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 70vh;
+    border-radius: 12px;
+}
+
+.modal p {
+    color: #fff;
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .card img {
+        height: 220px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<section class="silver-page">
+
+    <h1 class="page-title">Silver Jewellery Collections</h1>
+
+    <!-- SILVER RINGS -->
+    <h2 class="section-title">Silver Rings</h2>
+    <div class="grid">
+        <div class="card" onclick="openModal(this)">
+            <img src="https://img.tatacliq.com/images/i22//437Wx649H/MP000000025296825_437Wx649H_202502070920031.jpeg">
+            <p>Elegant silver ring with a smooth polished finish, perfect for everyday wear.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://img.tatacliq.com/images/i20//437Wx649H/MP000000023940090_437Wx649H_202410030243521.jpeg">
+            <p>Classic sterling silver ring crafted for timeless beauty.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://img.tatacliq.com/images/i13/437Wx649H/MP000000014868356_437Wx649H_202309280038021.jpeg">
+            <p>Minimal silver ring design offering elegance and comfort.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://img.tatacliq.com/images/i27//437Wx649H/MP000000028732384_437Wx649H_202510102302521.jpeg">
+            <p>Premium silver ring with refined craftsmanship and shine.</p>
+        </div>
+    </div>
+
+    <!-- SILVER POOJA ITEMS -->
+    <h2 class="section-title">Silver Pooja Items</h2>
+    <div class="grid">
+        <div class="card" onclick="openModal(this)">
+            <img src="https://5.imimg.com/data5/ECOM/Default/2023/1/VL/YE/KI/12783550/86-3baa1963-6d11-4e85-ac6e-482cca0d9dd8-500x500.jpg">
+            <p>Upgrade your pooja room with our handcrafted silver diyas. Double the glow, double the grace.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://5.imimg.com/data5/ECOM/Default/2023/8/333951698/OQ/WW/ET/12783550/55-1b8c0ece-9abb-423d-8f6d-f31a04433727-500x500.jpg">
+            <p>Intricate embossing, pure silver, and a soul of tradition. Elevate your home temple today.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://nobilityshoppe.in/cdn/shop/files/02_b1ed38d5-ebc5-41e2-a064-d1f469d702a3_800x.jpg?v=1722526278">
+            <p>A perfect blend of utility and spirituality. Our 8-inch silver plate features beautifully engraved auspicious symbols like the Om, Swastika, and Kalash to bring positive energy to your daily prayers.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://rukminim2.flixcart.com/image/480/640/xif0q/bowl/h/w/t/1-ad0-17-astro-d-original-imahf7q9mesbpveq.jpeg?q=90">
+            <p>Serve with grace or offer with devotion. This silver bowl features exquisite floral embossing, making it a sophisticated choice for ceremonial use or luxury home decor.</p>
+        </div>
+    </div>
+
+    <!-- SILVER BRACELETS -->
+    <h2 class="section-title">Silver Bracelets</h2>
+    <div class="grid">
+        <div class="card" onclick="openModal(this)">
+            <img src="https://trishhna.com/cdn/shop/files/Royal_Silver_Bracelet_For_Men.jpg?v=1756643198">
+            <p>Modern silver bracelet designed for a premium look.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://m.media-amazon.com/images/I/91J5mZ1qpzL._UY300_.jpg">
+            <p>Elegant silver bracelet suitable for all age groups.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://i.ebayimg.com/images/g/9eUAAOSwqT1hDSAO/s-l1200.jpg">
+            <p>Designer silver bracelet with fine detailing.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTROSj44keXLd1ugAPNzK4FcZ_Ukdu8fvMbkw&s">
+            <p>Classic silver bracelet offering timeless elegance.</p>
+        </div>
+    </div>
+
+    <!-- SILVER IDOLS -->
+    <h2 class="section-title">Silver Idols</h2>
+    <div class="grid">
+        <div class="card" onclick="openModal(this)">
+            <img src="https://www.theamethyststore.com/cdn/shop/products/AMS-115-0010-_3_1800x1800_46fd107c-e2d2-42a6-90c7-e92813f63511.jpg?v=1663658639&width=1080">
+            <p>Invite wisdom and success into your workspace or home with this stunningly detailed Ganesha idol. A perfect centerpiece for new beginnings.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://shop.swarna.com/wp-content/uploads/2022/08/OQ3126_1.jpg">
+            <p>Celebrate the patron of knowledge and music. Our Saraswati idol captures the grace of the Goddess with exceptional detail, making it an inspiring addition to any study or creative space.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://www.theamethyststore.com/cdn/shop/products/AMS-115-0011_1800x1800_0c4ee5c1-7848-4ed6-8988-2eb7b90eb1a9.jpg?v=1663661105&width=1080">
+            <p>Bring home the Goddess of Wealth. This silver Lakshmi idol, seated gracefully on a lotus, is designed to radiate peace and prosperity throughout your home.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://cdn.exoticindia.com/images/products/original/homeandliving/ddl509-6inch.jpg">
+            <p>Make a bold statement with this magnificent silver elephant. Adorned with traditional royal motifs, it’s a powerful symbol of luck and stability for your home or office.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImg">
+    <p id="modalText"></p>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-btn" target="_blank">
+        Enquire on WhatsApp
+    </a>
+</div>
+
+<script>
+    function openModal(card) {
+    const img = card.querySelector("img").src;
+    const text = card.querySelector("p").innerText;
+
+    document.getElementById("modalImg").src = img;
+    document.getElementById("modalText").innerText = text;
+    document.getElementById("modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+</script>
+</body>
+</html>

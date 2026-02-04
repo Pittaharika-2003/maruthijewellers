@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Collections | Maruthi Jewellers</title>
+    <style>
+        body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+.diamond-page {
+    padding: 40px 6%;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin: 40px 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.1);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card p {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.85);
+    padding: 30px;
+    z-index: 999;
+    text-align: center;
+    overflow-y: auto;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 70vh;
+    border-radius: 12px;
+}
+
+.modal p {
+    color: #fff;
+    max-width: 600px;
+    margin: 15px auto;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 35px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .card img {
+        height: 220px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<section class="diamond-page">
+
+    <h1 class="page-title">Diamond Jewellery Collections</h1>
+
+    <!-- DIAMOND RINGS -->
+    <h2 class="section-title">Diamond Rings</h2>
+    <div class="grid">
+        <div class="card" onclick="openModal(this)">
+            <img src="https://thumbs.dreamstime.com/b/female-engagement-wedding-rings-diamonds-black-background-female-wedding-diamonds-rings-black-background-silver-169388130.jpg">
+            <p>Elegant diamond ring crafted with precision, perfect for engagements and special moments.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://img.pikbest.com/ai/illus_our/20230529/70ac483d138e0e73cd675ac6fa1b5f78.jpg!w700wp">
+            <p>Classic diamond ring with a timeless design and brilliant sparkle.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://img.pikbest.com/ai/illus_our/20230529/bb4e584674275cfbb246f36b8c22590e.jpg!w700wp">
+            <p>Premium diamond ring designed for luxury and everyday elegance.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://media.istockphoto.com/id/157378194/photo/close-up-of-a-diamond-engagement-ring.jpg?s=612x612&w=0&k=20&c=IpFU-dX5-EO0oH4U7cwafdusLUYzqiVbuGhQWSkAsrQ=">
+            <p>Beautiful diamond ring with refined craftsmanship and shine.</p>
+        </div>
+    </div>
+
+    <!-- DIAMOND CHAINS -->
+    <h2 class="section-title">Diamond Chains</h2>
+    <div class="grid">
+        <div class="card" onclick="openModal(this)">
+            <img src="https://earthlyjewels.co/cdn/shop/files/NL1066_01.jpg?v=1760169119&width=1200">
+            <p>Stylish diamond chain with a premium pendant design.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://media.istockphoto.com/id/163122066/photo/round-diamonds-necklace.jpg?s=612x612&w=0&k=20&c=WGZd7NPAX1FyYPrjjnIM-c8jinMHT-GAIF4BLMYjtD4=">
+            <p>Elegant diamond chain suitable for festive and wedding occasions.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://t4.ftcdn.net/jpg/16/43/03/25/360_F_1643032565_OZqnm8Nsq1W8SDlPpRZeaQD5sV3KPneV.jpg">
+            <p>Luxury diamond chain crafted for a sophisticated look.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://i.pinimg.com/474x/79/24/4e/79244e6525ea144f260a9e5db58e69c1.jpg">
+            <p>Designer diamond chain blending elegance and brilliance.</p>
+        </div>
+    </div>
+
+    <!-- DIAMOND BRACELETS -->
+    <h2 class="section-title">Diamond Bracelets</h2>
+    <div class="grid">
+        <div class="card" onclick="openModal(this)">
+            <img src="https://www.rhinestonejewelry.com/cdn/shop/products/bracelets-17274-cz-tennis-bracelet-7-25-4mm-stones-silver-38299584135393_1024x1024.jpg?v=1663684283">
+            <p>Modern diamond bracelet with premium craftsmanship.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://www.elyta.in/cdn/shop/files/BT02921S7.jpg?v=1748084982">
+            <p>Elegant diamond bracelet suitable for special occasions.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://img.freepik.com/premium-photo/silver-bracelet-with-diamonds-black-background_760021-103.jpg">
+            <p>Designer diamond bracelet with fine detailing and shine.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://images.squarespace-cdn.com/content/v1/5e7ce3984198850553d5e4b2/1704238671078-PUTWAL8R08OXENWTM8K8/ADB199SLV.jpg">
+            <p>Luxury diamond bracelet offering timeless elegance.</p>
+        </div>
+    </div>
+
+    <!-- DIAMOND NECKLACES -->
+    <h2 class="section-title">Diamond Necklaces</h2>
+    <div class="grid">
+        <div class="card" onclick="openModal(this)">
+            <img src="https://www.voylla.com/cdn/shop/files/SVCCU20018_CS_77fb4074-b49b-4640-b06e-7828c08ee21a.jpg?v=1724846198">
+            <p>Traditional diamond necklace crafted for grand occasions.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://www.darjewellery.com/product_image/s400__aHR0cHM6Ly9tZWRpYS5kYXJqZXdlbGxlcnkuaW4vcHJvZHVjdF9pbWFnZXMvczEyMDBfXzE3MzU4OTA4MDIzNjQuanBn">
+            <p>Premium diamond necklace with elegant finishing.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://i.pinimg.com/736x/be/0d/ed/be0ded51654ebbe03ee3bfd7fb770d85.jpg">
+            <p>Designer diamond necklace combining luxury and style.</p>
+        </div>
+
+        <div class="card" onclick="openModal(this)">
+            <img src="https://www.darjewellery.com/product_image/s1200__aHR0cHM6Ly9tZWRpYS5kYXJqZXdlbGxlcnkuaW4vcHJvZHVjdF9pbWFnZXMvczEyMDBfXzE3MTYwMTkwNTIwMzMuanBn">
+            <p>Exclusive diamond necklace with premium sparkle.</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImg">
+    <p id="modalText"></p>
+
+    <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-btn" target="_blank">
+        Enquire on WhatsApp
+    </a>
+</div>
+
+<script>
+    function openModal(card) {
+    const img = card.querySelector("img").src;
+    const text = card.querySelector("p").innerText;
+
+    document.getElementById("modalImg").src = img;
+    document.getElementById("modalText").innerText = text;
+    document.getElementById("modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+</script>
+</body>
+</html>

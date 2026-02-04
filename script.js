@@ -133,7 +133,20 @@ cartButtons.forEach(button => {
         }, 2000);
     });
 });
+// =================================gold rate=================================
+window.onclick = (e) => {
+  if (e.target === modal) modal.style.display = "none";
+};
+  const openBtn = document.getElementById("openGoldRate");
+  const modal = document.getElementById("goldRateModal");
+  const closeBtn = document.getElementById("closeGoldRate");
 
+  openBtn.onclick = () => modal.style.display = "flex";
+  closeBtn.onclick = () => modal.style.display = "none";
+
+  window.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
 // =================================
 // FLOATING NOTIFICATION
 // =================================

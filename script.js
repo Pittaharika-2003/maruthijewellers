@@ -1,11 +1,4 @@
 
-const toggle = document.getElementById('mobileMenuToggle');
-const menu = document.getElementById('navMenu');
-
-toggle.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
-
 // =================================
 // INITIALIZE AOS (Animate On Scroll)
 // =================================
@@ -147,6 +140,7 @@ window.onclick = (e) => {
   window.onclick = (e) => {
     if (e.target === modal) modal.style.display = "none";
   };
+
 // =================================
 // FLOATING NOTIFICATION
 // =================================
@@ -435,7 +429,7 @@ productCards.forEach(card => {
 // =================================
 // CONSOLE WELCOME MESSAGE
 // =================================
-console.log('%c✨ Welcome to Maruti Jewellers! ✨',
+console.log('%c✨ Welcome to maruthi Jewellers! ✨',
     'background: linear-gradient(135deg, #1a4d4d, #c9a86a); color: white; font-size: 24px; padding: 20px; border-radius: 10px; font-weight: bold;');
 console.log('%c🌐 Website: maruthijewellers.in',
     'color: #1a4d4d; font-size: 16px; font-weight: bold;');

@@ -1,3 +1,44 @@
+<body>
+<script>
+  // Create a div element for the cursor
+  const cursor = document.createElement('div');
+  document.body.appendChild(cursor);
+
+  // Style the cursor using JS
+  cursor.style.position = 'absolute';
+  cursor.style.width = '20px';
+  cursor.style.height = '20px';
+  cursor.style.borderRadius = '50%';
+  cursor.style.backgroundColor = 'red';
+  cursor.style.pointerEvents = 'none'; // so it doesn't block clicks
+  cursor.style.transform = 'translate(-50%, -50%)';
+  cursor.style.transition = 'transform 0.1s ease';
+
+  // Hide the default cursor
+  document.body.style.cursor = 'none';
+
+  // Move the cursor with the mouse
+  document.addEventListener('mousemove', function(e) {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+
+  // Optional: make cursor bigger when hovering links
+  const links = document.querySelectorAll('a, button');
+  links.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      cursor.style.width = '40px';
+      cursor.style.height = '40px';
+      cursor.style.backgroundColor = 'blue';
+    });
+    link.addEventListener('mouseleave', () => {
+      cursor.style.width = '20px';
+      cursor.style.height = '20px';
+      cursor.style.backgroundColor = 'red';
+    });
+  });
+</script>
+</body>
 
 // =================================
 // INITIALIZE AOS (Animate On Scroll)

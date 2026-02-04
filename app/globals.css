@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  /* Gold colors */
+  --gold-primary: #D4AF37;
+  --gold-secondary: #B8860B;
+  --gold-light: #C9A962;
+
+  /* Dark theme colors */
+  --dark-900: #080808;
+  --dark-800: #0A0A0A;
+  --dark-700: #0D0D0D;
+  --dark-600: #0F0F0F;
+  --dark-500: #121212;
+  --dark-400: #151515;
+  --dark-300: #1A1A1A;
+  --dark-200: #1F1F1F;
+  --dark-100: #2A2A2A;
+
+  /* Text colors */
+  --text-primary: #FFFFFF;
+  --text-secondary: #9A9A9A;
+  --text-muted: #7A7A7A;
+  --text-subtle: #6A6A6A;
+  --text-light: #B0B0B0;
+  --text-accent: #A0A0A0;
+
+  /* Status colors */
+  --green-accent: #25D366;
+}
+
+@layer base {
+  html, body {
+    height: 100%;
+  }
+
+  .font-cormorant {
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .font-inter {
+    font-family: "Inter", sans-serif;
+  }
+}

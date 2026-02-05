@@ -1,0 +1,385 @@
+@import "tailwindcss";
+
+:root {
+  /* ===== GOLD COLORS ===== */
+  --gold-primary: #D4AF37;
+  --gold-secondary: #B8860B;
+  --gold-light: #C9A962;
+
+  /* Gold with opacity variants */
+  --gold-5: #D4AF3708;
+  --gold-10: #D4AF3710;
+  --gold-20: #D4AF3720;
+  --gold-30: #D4AF3730;
+  --gold-40: #D4AF3740;
+  --gold-60: #D4AF3760;
+
+  /* ===== DARK BACKGROUND COLORS ===== */
+  --dark-950: #050505;
+  --dark-900: #080808;
+  --dark-850: #0A0A0A;
+  --dark-800: #0D0D0D;
+  --dark-750: #0F0F0F;
+  --dark-700: #121212;
+  --dark-650: #141210;
+  --dark-600: #151515;
+  --dark-550: #1A1410;
+  --dark-500: #1A1A1A;
+  --dark-400: #1F1F1F;
+  --dark-300: #2A2A2A;
+
+  /* ===== TEXT COLORS ===== */
+  --text-white: #FFFFFF;
+  --text-off-white: #F5F5F0;
+  --text-light: #B0B0B0;
+  --text-secondary: #9A9A9A;
+  --text-muted: #8A8A8A;
+  --text-dim: #7A7A7A;
+  --text-subtle: #6A6A6A;
+  --text-faded: #5A5A5A;
+  --text-ghost: #4A4A4A;
+
+  /* ===== ACCENT COLORS ===== */
+  --green-whatsapp: #25D366;
+  --green-whatsapp-20: #25D36620;
+  --red-negative: #EF4444;
+  --red-negative-20: #EF444420;
+
+  /* ===== GRADIENTS (as CSS custom properties for reference) ===== */
+  /* Gold gradient: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%) */
+  /* Header bg: linear-gradient(180deg, #0D0D0D 0%, #0A0A0A 100%) */
+  /* Hero bg: radial-gradient(ellipse 150% 150% at 80% 50%, #1A1410 0%, #0D0D0D 70%, #080808 100%) */
+  /* About bg: radial-gradient(ellipse 120% 120% at 20% 50%, #141210 0%, #0A0A0A 60%, #080808 100%) */
+  /* Collections bg: linear-gradient(180deg, #0A0A0A 0%, #0D0D0D 50%, #0A0A0A 100%) */
+  /* Footer bg: linear-gradient(180deg, #0A0A0A 0%, #080808 50%, #050505 100%) */
+
+  /* ===== SHADOWS ===== */
+  --shadow-card: 0 4px 16px #00000030;
+  --shadow-card-hover: 0 8px 24px #D4AF3720, 0 4px 16px #00000040;
+  --shadow-feature: 0 2px 8px #00000020;
+
+  /* ===== TYPOGRAPHY ===== */
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* ===== SPACING ===== */
+  --section-padding: 100px;
+  --section-padding-mobile: 60px;
+  --container-padding: 100px;
+  --container-padding-mobile: 24px;
+
+  /* ===== BORDER RADIUS ===== */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-3xl: 30px;
+  --radius-full: 9999px;
+}
+
+@layer base {
+  html, body {
+    height: 100%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Font utilities */
+  .font-cormorant {
+    font-family: var(--font-display);
+  }
+
+  .font-inter {
+    font-family: var(--font-body);
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--dark-850);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold-secondary);
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gold-primary);
+  }
+}
+
+/* ===== ANIMATION KEYFRAMES ===== */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    box-shadow: 0 0 0 0 var(--gold-40);
+  }
+  50% {
+    box-shadow: 0 0 0 10px transparent;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px var(--gold-30));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--gold-60));
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+@keyframes price-update {
+  0% {
+    transform: scale(1);
+    color: inherit;
+  }
+  50% {
+    transform: scale(1.1);
+    color: var(--gold-primary);
+  }
+  100% {
+    transform: scale(1);
+    color: inherit;
+  }
+}
+
+@keyframes border-glow {
+  0%, 100% {
+    border-color: var(--gold-30);
+  }
+  50% {
+    border-color: var(--gold-primary);
+  }
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ===== UTILITY ANIMATION CLASSES ===== */
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gold-10) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2s infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 3s ease-in-out infinite;
+}
+
+.animate-price-update {
+  animation: price-update 0.5s ease-out;
+}
+
+.animate-border-glow {
+  animation: border-glow 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* ===== HOVER EFFECT CLASSES ===== */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.hover-glow {
+  transition: box-shadow 0.3s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 30px var(--gold-30);
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+.hover-gold-border {
+  transition: border-color 0.3s ease;
+}
+
+.hover-gold-border:hover {
+  border-color: var(--gold-primary);
+}
+
+/* ===== IMAGE EFFECTS ===== */
+.image-zoom {
+  overflow: hidden;
+}
+
+.image-zoom img,
+.image-zoom > div {
+  transition: transform 0.5s ease;
+}
+
+.image-zoom:hover img,
+.image-zoom:hover > div {
+  transform: scale(1.1);
+}
+
+/* ===== TEXT GRADIENT ===== */
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--gold-primary), var(--gold-light), var(--gold-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== GLASS EFFECT ===== */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== GOLD GRADIENT BACKGROUNDS ===== */
+.bg-gold-gradient {
+  background: linear-gradient(135deg, var(--gold-primary) 0%, var(--gold-secondary) 100%);
+}
+
+.bg-gold-gradient-subtle {
+  background: linear-gradient(135deg, var(--gold-20) 0%, var(--gold-secondary)20 100%);
+}
+
+/* ===== CARD BACKGROUNDS ===== */
+.bg-card {
+  background: var(--dark-600);
+}
+
+.bg-card-featured {
+  background: linear-gradient(135deg, var(--dark-600) 0%, var(--dark-550) 100%);
+}
+
+/* ===== SECTION BACKGROUNDS ===== */
+.bg-section-dark {
+  background: var(--dark-750);
+}
+
+.bg-section-gradient {
+  background: linear-gradient(180deg, var(--dark-850) 0%, var(--dark-800) 50%, var(--dark-850) 100%);
+}
+
+/* ===== SKELETON LOADING ===== */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--dark-700) 25%,
+    var(--dark-600) 50%,
+    var(--dark-700) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* ===== BORDER STYLES ===== */
+.border-gold-gradient {
+  border: 1px solid;
+  border-image: linear-gradient(135deg, var(--gold-40), var(--dark-400)) 1;
+}
+
+.border-gold-gradient-featured {
+  border: 2px solid;
+  border-image: linear-gradient(135deg, var(--gold-primary), var(--gold-secondary) 50%, var(--gold-60)) 1;
+}
+
+/* ===== RESPONSIVE UTILITIES ===== */
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 80px;
+    --container-padding: 40px;
+  }
+
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 60px;
+    --container-padding: 24px;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
